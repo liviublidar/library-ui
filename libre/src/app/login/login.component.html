@@ -21,9 +21,9 @@
     </form>
   </div>
   <div class="card alt">
-    <div class="toggle" (click)="showSignupGui()"></div>
+    <div class="toggle" (click)="toggleSignupGui(true)" [ngClass]="{'hidePointer': guiState.showSignup}"></div>
     <h1 class="title">Register
-      <div class="close" (click)="showSignupGui()"></div>
+      <div class="close" (click)="toggleSignupGui(false)"></div>
     </h1>
     <form>
       <div class="input-container">

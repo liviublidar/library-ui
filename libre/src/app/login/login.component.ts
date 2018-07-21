@@ -25,8 +25,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  public showSignupGui(): void {
-    this.guiState.showSignup = !this.guiState.showSignup;
+  public toggleSignupGui(state?: boolean): void {
+    state === undefined ? this.guiState.showSignup = !this.guiState.showSignup : this.guiState.showSignup = state;
   }
 
   public isModelEmpty(modelValue): boolean {

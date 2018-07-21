@@ -16,10 +16,10 @@ h1 {
     font-size: 12px;
   }
   .pen-title span .fa {
-    color: #8200ee;
+    color: #ff5454;
   }
   .pen-title span a {
-    color: #8200ee;
+    color: #ff5454;
     font-weight: 600;
     text-decoration: none;
   }
@@ -32,7 +32,7 @@ h1 {
   .rerun a {
     cursor: pointer;
     display: inline-block;
-    background: #6200EE;
+    background: #ff5454;
     border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     padding: 10px 20px;
@@ -69,7 +69,7 @@ h1 {
   #portfolio {
     bottom: 96px;
     right: 36px;
-    background: #6200EE;
+    background: #ff5454;
     width: 44px;
     height: 44px;
     -webkit-animation: buttonFadeInUp 1s ease;
@@ -167,10 +167,10 @@ h1 {
   .card .title {
     position: relative;
     z-index: 1;
-    border-left: 5px solid #6200EE;
+    border-left: 5px solid #ff5454;
     margin: 0 0 35px;
     padding: 10px 0 10px 50px;
-    color: #8200ee;
+    color: #ff5454;
     font-size: 32px;
     font-weight: 600;
     text-transform: uppercase;
@@ -200,7 +200,7 @@ h1 {
     width: 50%;
   }
   .card .input-container input:valid ~ label,
-  .card .input-container input:not(.empty) ~ label {
+  .card .input-container input[type="email"]:not(.empty) ~ label {
     color: #9d9d9d;
     -webkit-transform: translate(-12%, -50%) scale(0.75);
             transform: translate(-12%, -50%) scale(0.75);
@@ -226,7 +226,7 @@ h1 {
   .card .input-container .bar:before, .card .input-container .bar:after {
     content: '';
     position: absolute;
-    background: #6200EE;
+    background: #ff5454;
     width: 0;
     height: 2px;
     transition: .2s ease;
@@ -269,7 +269,7 @@ h1 {
     top: 50%;
     left: 50%;
     display: block;
-    background: #6200EE;
+    background: #ff5454;
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -278,10 +278,10 @@ h1 {
     transition: .3s ease;
   }
   .card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
-    border-color: #8200ee;
+    border-color: #ff5454;
   }
   .card .button-container button:hover span, .card .button-container button:active span, .card .button-container button:focus span {
-    color: #8200ee;
+    color: #ff5454;
   }
   .card .button-container button:active span, .card .button-container button:focus span {
     color: #ffffff;
@@ -325,7 +325,7 @@ h1 {
   }
   .card.alt .toggle {
     position: relative;
-    background: #6200EE;
+    background: #ff5454;
     width: 140px;
     height: 140px;
     border-radius: 100%;
@@ -336,6 +336,10 @@ h1 {
     text-align: center;
     cursor: pointer;
   }
+  .card.alt .toggle.hidePointer{
+    cursor: auto;
+  }
+
   .card.alt .toggle:before {
     content: '\f040';
     display: inline-block;
@@ -396,7 +400,7 @@ h1 {
     border-color: #ffffff;
   }
   .card.alt .button-container button span {
-    color: #8200ee;
+    color: #ff5454;
   }
   .card.alt .button-container button:hover {
     background: rgba(255, 255, 255, 0.9);

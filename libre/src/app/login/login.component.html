@@ -10,7 +10,12 @@
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="password" name="login-password" required="required" [(ngModel)]="formData.loginForm.pwd"/>
+        <input *ngIf="!guiState.showLoginPwd" type="password" name="login-password" required="required" [(ngModel)]="formData.loginForm.pwd" [ngClass]="{'empty': isModelEmpty(formData.loginForm.pwd)}"/>
+        <input *ngIf="guiState.showLoginPwd" type="text" name="login-password" required="required" [(ngModel)]="formData.loginForm.pwd" [ngClass]="{'empty': isModelEmpty(formData.loginForm.pwd)}"/>
+        <div *ngIf="formData.loginForm.pwd.length > 0" class="glimpse" (mouseenter)="toggleShowLoginPwd(true, $event)" (mouseleave)="toggleShowLoginPwd(false, $event)">
+          <i *ngIf="!guiState.showLoginPwd" class="fa fa-eye-slash"></i>
+          <i *ngIf="guiState.showLoginPwd" class="fa fa-eye"></i>
+        </div>
         <label for="login-password">Password*</label>
         <div class="bar"></div>
       </div>

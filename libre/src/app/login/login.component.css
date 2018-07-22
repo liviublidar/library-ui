@@ -179,6 +179,15 @@ h1 {
     position: relative;
     margin: 0 60px 50px;
   }
+
+  .card .input-container div.glimpse {
+    display: inline-block;
+    position: absolute;
+    font-size: 24px !important;
+    top:25px;
+    right: -32px;
+    z-index: 12;
+  }
   .card .input-container input {
     outline: none;
     z-index: 1;
@@ -196,7 +205,8 @@ h1 {
     -webkit-transform: translate(-12%, -50%) scale(0.75);
             transform: translate(-12%, -50%) scale(0.75);
   }
-  .card .input-container input:focus ~ .bar:before, .card .input-container input:focus ~ .bar:after {
+  .card .input-container input:focus ~ .bar:before, .card .input-container input:focus ~ .bar:after,
+  .card .input-container input:not(.empty) ~ .bar:before, .card .input-container input:not(.empty) ~ .bar:after {
     width: 50%;
   }
   .card .input-container input:valid ~ label,
@@ -338,6 +348,7 @@ h1 {
   }
   .card.alt .toggle.hidePointer{
     cursor: auto;
+    pointer-events: none;
   }
 
   .card.alt .toggle:before {

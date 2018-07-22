@@ -10,7 +10,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   public guiState = {
-    showSignup: false
+    showSignup: false,
+    showLoginPwd: false,
+    showSignupPwd: false,
+    showSignupRepeatPwd: false
   };
 
   public formData = {
@@ -25,12 +28,16 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  public isModelEmpty(modelValue): boolean {
+    return modelValue.length === 0;
+  }
+
   public toggleSignupGui(state?: boolean): void {
     state === undefined ? this.guiState.showSignup = !this.guiState.showSignup : this.guiState.showSignup = state;
   }
 
-  public isModelEmpty(modelValue): boolean {
-    return modelValue.length === 0;
+  public toggleShowLoginPwd(state?: boolean, e?): void {
+    state === undefined ? this.guiState.showLoginPwd = ! this.guiState.showLoginPwd : this.guiState.showLoginPwd = state;
   }
 
   public debugForm(): void {
